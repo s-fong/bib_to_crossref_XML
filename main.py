@@ -1,7 +1,7 @@
 
 import bibtexparser
 
-path = 'C:/Users/sfon036/Desktop/work_files/PhysiomeSubmissions/TEX_Mathematical model of excitation-contraction in a uterine smooth muscle cell/'
+path = 'examples/'
 with open(path+'sample.bib') as f:
     bib_database = bibtexparser.load(f)
 
