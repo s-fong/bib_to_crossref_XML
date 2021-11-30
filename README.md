@@ -1,5 +1,8 @@
 # bib_to_crossref_XML
 
+## prerequisites
+bibtexparser
+
 ## INPUTS
 bibtex file
 
