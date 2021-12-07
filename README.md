@@ -11,4 +11,5 @@ bibtexparser
 xml file of entries listed in the .bbl file to go in crossref citation list, in xml format
 
 ## BEWARE
-Does not sort items marked 'software'
+Include a path to a folder containing only one .bib and one associated .bbl file. 
+Parser currently does not sort items marked 'software'.
