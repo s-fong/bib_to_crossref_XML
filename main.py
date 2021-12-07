@@ -4,10 +4,19 @@
 
 import bibtexparser
 import os
+import sys
 
-path = 'examples/'
-bibfile = [f for f in os.listdir(path) if f.endswith('.bib')][0]
-bblfile = [f for f in os.listdir(path) if f.endswith('.bbl')][0]
+path = 'C:/Users/sfon036/Desktop/work_files/PhysiomeSubmissions/TEX_submission_folders/S000001/'
+try:
+    bibfile = [f for f in os.listdir(path) if f.endswith('.bib')][0]
+except:
+    sys.exit(".bib file is missing")
+try:
+    bblfile = [f for f in os.listdir(path) if f.endswith('.bbl')][0]
+except:
+    sys.exit(".bbl file is missing")
+
+
 with open(path+bibfile) as f:
     bib_database = bibtexparser.load(f)
 
