@@ -4,7 +4,11 @@
 bibtexparser
 
 ## INPUTS
-bibtex file
+- .bib file
+- .bbl file
 
 ## OUTPUTS
-xml file of selected entries to go in crossref citation list, in xml format
+xml file of entries listed in the .bbl file to go in crossref citation list, in xml format
+
+## BEWARE
+Does not sort items marked 'software'

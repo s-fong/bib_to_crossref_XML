@@ -1,0 +1,72 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bers(2001)]{bers2001}
+D.~Bers.
+\newblock \emph{Excitation-contraction coupling and cardiac contractile force},
+  volume 237.
+\newblock Springer Science \& Business Media, 2001.
+
+\bibitem[Cuellar et~al.(2003)Cuellar, Lloyd, Nielsen, Bullivant, Nickerson, and
+  Hunter]{cuellar}
+A.~A. Cuellar, C.~M. Lloyd, P.~F. Nielsen, D.~P. Bullivant, D.~P. Nickerson,
+  and P.~J. Hunter.
+\newblock An overview of cellml 1.1, a biological model description language.
+\newblock \emph{SIMULATION}, 79\penalty0 (12):\penalty0 740--747, 2003.
+\newblock \doi{10.1177/0037549703040939}.
+\newblock URL \url{https://doi.org/10.1177/0037549703040939}.
+
+\bibitem[Jafri et~al.(1998)Jafri, Rice, and Winslow]{jafri1998}
+M.~S. Jafri, J.~J. Rice, and R.~L. Winslow.
+\newblock Cardiac ca2+ dynamics: the roles of ryanodine receptor adaptation and
+  sarcoplasmic reticulum load.
+\newblock \emph{Biophysical journal}, 74\penalty0 (3):\penalty0 1149--1168,
+  1998.
+
+\bibitem[MATLAB(2017)]{MATLAB:2017}
+MATLAB.
+\newblock \emph{version 9.3.0713579 (R2017b)}.
+\newblock The MathWorks Inc., Natick, Massachusetts, 2017.
+
+\bibitem[Mendez et~al.(1960)Mendez, Keys, Anderson, Grande, et~al.]{mendez1960}
+J.~Mendez, A.~Keys, J.~Anderson, F.~Grande, et~al.
+\newblock Density of fat and bone mineral of the mammalian body.
+\newblock \emph{Metabolism}, 9:\penalty0 472--477, 1960.
+
+\bibitem[Mitchell et~al.(2020)Mitchell, Muftakhidinov, Winchen, Wilms, van
+  Schaik, badshah400, Mo-Gul, Badger, Jędrzejewski-Szmek, kensington, and
+  kylesower]{mark_mitchell_2020_3941227}
+M.~Mitchell, B.~Muftakhidinov, T.~Winchen, A.~Wilms, B.~van Schaik, badshah400,
+  Mo-Gul, T.~G. Badger, Z.~Jędrzejewski-Szmek, kensington, and kylesower.
+\newblock markummitchell/engauge-digitizer: Nonrelease, July 2020.
+\newblock URL \url{https://doi.org/10.5281/zenodo.3941227}.
+
+\bibitem[Saucerman et~al.(2003)Saucerman, Brunton, Michailova, and
+  McCulloch]{saucerman2003}
+J.~J. Saucerman, L.~L. Brunton, A.~P. Michailova, and A.~D. McCulloch.
+\newblock Modeling $\beta$-adrenergic control of cardiac myocyte contractility
+  in silico.
+\newblock \emph{Journal of Biological Chemistry}, 278\penalty0 (48):\penalty0
+  47997--48003, 2003.
+
+\bibitem[Shampine and Reichelt(1997)]{shampine1997matlab}
+L.~F. Shampine and M.~W. Reichelt.
+\newblock The matlab ode suite.
+\newblock \emph{SIAM journal on scientific computing}, 18\penalty0
+  (1):\penalty0 1--22, 1997.
+
+\bibitem[Wilkinson et~al.(2016)Wilkinson, Dumontier, Aalbersberg, Appleton,
+  Axton, Baak, Blomberg, Boiten, da~Silva~Santos, Bourne,
+  et~al.]{wilkinson2016fair}
+M.~D. Wilkinson, M.~Dumontier, I.~J. Aalbersberg, G.~Appleton, M.~Axton,
+  A.~Baak, N.~Blomberg, J.-W. Boiten, L.~B. da~Silva~Santos, P.~E. Bourne,
+  et~al.
+\newblock The fair guiding principles for scientific data management and
+  stewardship.
+\newblock \emph{Scientific data}, 3\penalty0 (1):\penalty0 1--9, 2016.
+
+\end{thebibliography}
