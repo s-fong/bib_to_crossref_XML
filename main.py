@@ -6,7 +6,7 @@ import bibtexparser
 import os
 import sys
 
-path = 'C:/Users/sfon036/Desktop/work_files/PhysiomeSubmissions/TEX_submission_folders/S000001/'
+path = 'C:/Users/sfon036/Desktop/work_files/PhysiomeSubmissions/TEX_submission_folders/S000002/'
 try:
     bibfile = [f for f in os.listdir(path) if f.endswith('.bib')][0]
 except:
@@ -17,12 +17,12 @@ except:
     sys.exit(".bbl file is missing")
 
 
-with open(path+bibfile) as f:
+with open(path+bibfile, encoding="utf8") as f:
     bib_database = bibtexparser.load(f)
 
 # parse the bbl file to write out only sources that are cited in the manuscript
 used_sources = []
-with open(path+bblfile) as bl:
+with open(path+bblfile, encoding="utf8") as bl:
     for line in bl:
         if 'bibitem' in line:
             multiline = False
@@ -44,9 +44,10 @@ fields = dict()
 fields = {xr_list[i]: bib_list[i] for i in range(len(xr_list))}
 
 XR_output = path + 'crossref_citation_list.xml'
+count = 0
 with open(XR_output, 'w') as w:
     w.write('<citation_list>\n')
-    for count, entry in enumerate(bib_database.entries):
+    for entry in bib_database.entries:
         if entry['ID'] in used_sources:
             w.write('<citation key='+str(count)+'>\n',)
             for field in fields:
@@ -54,5 +55,7 @@ with open(XR_output, 'w') as w:
                     w.write('\t<%s>' % field + entry['%s' % fields[field]] + '</%s>\n' % field)
                 except:
                     pass
+            count += 1
             w.write('/<citation>\n')
     w.write('/<citation_list>\n')
+    print('Written out ' + XR_output)
