@@ -6,7 +6,7 @@ import bibtexparser
 import os
 import sys
 
-path = 'C:/Users/sfon036/Desktop/work_files/PhysiomeSubmissions/TEX_submission_folders/S000002/'
+path = 'C:/Users/sfon036/Desktop/work_files/PhysiomeSubmissions/TEX_submission_folders/S000009/'
 try:
     bibfile = [f for f in os.listdir(path) if f.endswith('.bib')][0]
 except:
@@ -17,7 +17,15 @@ except:
     sys.exit(".bbl file is missing")
 
 
+#  all fields in .bib file must be enclosed with curly braces {} after the equals sign
 with open(path+bibfile, encoding="utf8") as f:
+    with open(path+'tempbib.bib','w',encoding="utf8") as w:
+        for line in f:
+            if 'month' in line and '{' not in line:
+                line = 'month = {' + line.split('=')[-1].replace(',','') + '},'#month = dec,
+            w.write(line)
+
+with open(path+'tempbib.bib', encoding="utf8") as f:
     bib_database = bibtexparser.load(f)
 
 # parse the bbl file to write out only sources that are cited in the manuscript
