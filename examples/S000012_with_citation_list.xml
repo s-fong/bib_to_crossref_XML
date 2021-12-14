@@ -1,55 +1,70 @@
+<doi_batch version="4.4.2" xmlns="http://www.crossref.org/doi_resources_schema/4.4.2"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.crossref.org/doi_resources_schema/4.4.2 http://www.crossref.org/schemas/doi_resources4.4.2.xsd">
+<head>
+<doi_batch_id>S000012_addition1</doi_batch_id>
+<depositor>
+<depositor_name>Shelley Fong</depositor_name>
+<email_address>s.fong@auckland.ac.nz</email_address>
+</depositor>
+</head>
+<body>
+<doi_citations>
+<!--  ******* The DOI of the article *******   -->
+<doi> 10.36903/physiome.16664248
+</doi>
 <citation_list>
-<citation key=0>
+<citation key="ref0">
 	<article_title>Modeling $\beta$-adrenergic control of cardiac myocyte contractility in silico</article_title>
 	<journal_title>Journal of Biological Chemistry</journal_title>
 	<author>Saucerman, Jeffrey J and Brunton, Laurence L and Michailova, Anushka P and McCulloch, Andrew D</author>
 	<volume>278</volume>
 	<cYear>2003</cYear>
-/<citation>
-<citation key=2>
+</citation>
+<citation key="ref1">
 	<article_title>Cardiac Ca2+ dynamics: the roles of ryanodine receptor adaptation and sarcoplasmic reticulum load</article_title>
 	<journal_title>Biophysical journal</journal_title>
 	<author>Jafri, M Saleet and Rice, J Jeremy and Winslow, Raimond L</author>
 	<volume>74</volume>
 	<cYear>1998</cYear>
-/<citation>
-<citation key=4>
+</citation>
+<citation key="ref2">
 	<article_title>Excitation-contraction coupling and cardiac contractile force</article_title>
 	<author>Bers, Donald</author>
 	<volume>237</volume>
 	<cYear>2001</cYear>
-/<citation>
-<citation key=5>
+</citation>
+<citation key="ref3">
 	<article_title>Density of fat and bone mineral of the mammalian body.</article_title>
 	<journal_title>Metabolism</journal_title>
 	<author>Mendez, J and Keys, A and Anderson, JT and Grande, F and others</author>
 	<volume>9</volume>
 	<cYear>1960</cYear>
-/<citation>
-<citation key=6>
+</citation>
+<citation key="ref4">
 	<article_title>An Overview of CellML 1.1, a Biological Model Description Language</article_title>
 	<journal_title>SIMULATION</journal_title>
 	<author>Autumn A. Cuellar and Catherine M. Lloyd and Poul F. Nielsen and David P. Bullivant and David P. Nickerson and Peter J. Hunter</author>
 	<volume>79</volume>
 	<cYear>2003</cYear>
-/<citation>
-<citation key=7>
+</citation>
+<citation key="ref5">
 	<article_title>version 9.3.0713579 (R2017b)</article_title>
 	<author>MATLAB</author>
 	<cYear>2017</cYear>
-/<citation>
-<citation key=8>
+</citation>
+<citation key="ref6">
 	<article_title>The matlab ode suite</article_title>
 	<journal_title>SIAM journal on scientific computing</journal_title>
 	<author>Shampine, Lawrence F and Reichelt, Mark W</author>
 	<volume>18</volume>
 	<cYear>1997</cYear>
-/<citation>
-<citation key=9>
+</citation>
+<citation key="ref7">
 	<article_title>The FAIR Guiding Principles for scientific data management and stewardship</article_title>
 	<journal_title>Scientific data</journal_title>
 	<author>Wilkinson, Mark D and Dumontier, Michel and Aalbersberg, IJsbrand Jan and Appleton, Gabrielle and Axton, Myles and Baak, Arie and Blomberg, Niklas and Boiten, Jan-Willem and da Silva Santos, Luiz Bonino and Bourne, Philip E and others</author>
 	<volume>3</volume>
 	<cYear>2016</cYear>
-/<citation>
-/<citation_list>
+</citation>
+</citation_list>
+</doi_citations>

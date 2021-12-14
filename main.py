@@ -6,7 +6,23 @@ import bibtexparser
 import os
 import sys
 
-path = 'C:/Users/sfon036/Desktop/work_files/PhysiomeSubmissions/TEX_submission_folders/S000009/'
+# path = 'C:/Users/sfon036/Desktop/work_files/PhysiomeSubmissions/TEX_submission_folders/S000012/'
+# submissionID = path.split('/')[-2]
+path = 'examples/'
+submissionID = "S000012"
+
+# find DOI of this article
+DOI = []
+# pub_path = "C:/Users/sfon036/Documents/physiome_curation_work/journal-website/content/Articles/"
+pub_path = path
+with open(pub_path+submissionID+'.md') as p:
+    for line in p:
+        if "DOI:" in line:
+            DOI = line.split(':')[-1] #DOI = "10.36903/physiome.16590317"
+            break
+if not DOI:
+    sys.exit("DOI is missing")
+
 try:
     bibfile = [f for f in os.listdir(path) if f.endswith('.bib')][0]
 except:
@@ -51,19 +67,36 @@ bib_list = ['title', 'journal', 'author', 'volume', 'issue', 'year']
 fields = dict()
 fields = {xr_list[i]: bib_list[i] for i in range(len(xr_list))}
 
-XR_output = path + 'crossref_citation_list.xml'
+preamble = "<doi_batch version=\"4.4.2\" xmlns=\"http://www.crossref.org/doi_resources_schema/4.4.2\"\
+  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n\
+  xsi:schemaLocation=\"http://www.crossref.org/doi_resources_schema/4.4.2 http://www.crossref.org/schemas/doi_resources4.4.2.xsd\">\n\
+<head>\n\
+<doi_batch_id>%s_addition1</doi_batch_id>\n\
+<depositor>\n\
+<depositor_name>Shelley Fong</depositor_name>\n\
+<email_address>s.fong@auckland.ac.nz</email_address>\n\
+</depositor>\n\
+</head>\n\
+<body>\n\
+<doi_citations>\n\
+<!--  ******* The DOI of the article *******   -->\n\
+<doi>%s</doi>\n" %(submissionID, DOI)
+
+XR_output = path + submissionID + '_with_citation_list.xml'
 count = 0
 with open(XR_output, 'w') as w:
+    w.write(preamble)
     w.write('<citation_list>\n')
     for entry in bib_database.entries:
         if entry['ID'] in used_sources:
-            w.write('<citation key='+str(count)+'>\n',)
+            w.write('<citation key="ref'+str(count)+'">\n',)
             for field in fields:
                 try:
                     w.write('\t<%s>' % field + entry['%s' % fields[field]] + '</%s>\n' % field)
                 except:
                     pass
             count += 1
-            w.write('/<citation>\n')
-    w.write('/<citation_list>\n')
+            w.write('</citation>\n')
+    w.write('</citation_list>\n')
+    w.write('</doi_citations>\n')
     print('Written out ' + XR_output)
