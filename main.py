@@ -90,6 +90,9 @@ with open(XR_output, 'w') as w:
     for entry in bib_database.entries:
         if entry['ID'] in used_sources:
             w.write('<citation key="ref'+str(count)+'">\n',)
+            if entry['author'] == 'MATLAB':
+                del entry['author']
+                entry['title'] = 'MATLAB ' + entry['title'];
             for field in fields:
                 try:
                     w.write('\t<%s>' % field + entry['%s' % fields[field]] + '</%s>\n' % field)
@@ -100,3 +103,26 @@ with open(XR_output, 'w') as w:
     w.write('</citation_list>\n')
     w.write('</doi_citations>\n')
     print('Written out ' + XR_output)
+
+plaintext_output = path + submissionID + '_PLAINTEXT_citation_list.xml'
+count = 1
+with open(plaintext_output, 'w') as po:
+    po.write('References: ')
+    for entry in bib_database.entries:
+        if entry['ID'] in used_sources:
+            po.write(str(count)+'. ')
+            for f, field in enumerate(fields):
+                if 'article_title' in field or 'author' in field:
+                    try:
+                        po.write(entry['%s' % fields[field]] + '. ')
+                    except:
+                        pass
+                else:
+                    try:
+                        po.write(bib_list[f].capitalize() + ': '+ entry['%s' % fields[field]]+'. ')
+                    except:
+                        pass
+            po.write(' <br />')
+            # po.write('\n\n')
+            count += 1
+    print('Written out ' + plaintext_output)
