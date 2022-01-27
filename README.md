@@ -1,4 +1,5 @@
 # bib_to_crossref_XML
+It is required that you compile your .tex and .bib file locally, in order to access the .bbl file.
 
 ## prerequisites
 bibtexparser
