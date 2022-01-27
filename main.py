@@ -59,7 +59,7 @@ for sub in subs:
                 multiline = False
                 refTitle = line
                 # append to line with continuation of ref title, which could br broken onto several lines
-                while '}' not in line:
+                while '}\n' not in line:
                     multiline = True
                     line = bl.readline()
                     refTitle += line
